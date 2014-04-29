@@ -9,6 +9,7 @@ import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -27,6 +28,8 @@ public class MaskedView extends RelativeLayout {
 
         @Override
         protected void dispatchDraw(Canvas canvas) {
+
+            setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 
 //            Bitmap resizedBitmap = Bitmap.createScaledBitmap(mMask, this.getWidth(), this.getHeight(), false);
 //            Bitmap result = Bitmap.createBitmap(this.getWidth(), this.getHeight(), Bitmap.Config.ARGB_8888); //create another bitmap with same height
